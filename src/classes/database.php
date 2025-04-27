@@ -1,6 +1,6 @@
 <?php
-class Database{
-  private ?PDO $connection;
+class Database {
+  private PDO $connection;
 
   public function __construct()
   {
@@ -20,7 +20,7 @@ class Database{
     }
   }
 
-  public function query(?string $query, array $params = []){
+  public function query(string $query, array $params = []){
     try{
       $stmt = $this->connection->prepare($query);
       $stmt->execute($params);

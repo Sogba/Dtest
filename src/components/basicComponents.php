@@ -1,6 +1,6 @@
 <?php
-function createHead(?string $pageName){
-  return'
+function createHead(string $pageName){
+  echo '
   <!DOCTYPE html>
   <html lang="en">
   <head>
@@ -9,4 +9,8 @@ function createHead(?string $pageName){
       <title>'.$pageName.'</title>
       <link rel="stylesheet" href="'.ROOT_DIR.'style/index.css">
   </head>';
+}
+
+function navbar(){
+  
 }
