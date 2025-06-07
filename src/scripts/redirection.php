@@ -1,7 +1,7 @@
 <?php
-require "./config.php";
+require_once "./config.php";
 
-function redirect(?string $address){
+function redirect(string $address){
   header("location: ".ROOT_DIR.$address);
   exit;
 }
