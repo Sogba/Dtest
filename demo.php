@@ -13,5 +13,5 @@ require_once ROOT_DIR."src/classes/roles.php";
 
   loginForm();
   registerForm();
-  
+  logoutButton();
 ?>

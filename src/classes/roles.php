@@ -17,13 +17,13 @@ class User{
   }
 
   static function checkLogged(Database $db){
-    if(!isset($_SESSION['id']) || !isset($_SESSION['username']))
+    if(!isset($_SESSION['id']) || !isset($_SESSION['email']))
       redirect("index.php");
     
     $sessionId = $_SESSION['id'];
-    $sessionUsername = $_SESSION['username'];
+    $sessionEmail = $_SESSION['email'];
 
-    $queryResult = $db->query("SELECT *  FROM users WHERE id=? & username=?", [$sessionId, $sessionUsername]);
+    $queryResult = $db->query("SELECT *  FROM users WHERE id=? & username=?", [$sessionId, $sessionEmail]);
   }
 }
 

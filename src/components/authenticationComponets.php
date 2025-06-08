@@ -39,3 +39,14 @@ function registerForm(){
   <?php
   endif;
 }
+
+  function logoutButton(){
+    if(true):?>
+    <div class="logoutbutton">
+        <form action="" method="post">
+      <input type="submit" value="Logout" name="logout">
+    </form>
+    </div>
+    <?php
+    endif;
+  }
