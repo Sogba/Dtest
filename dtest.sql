@@ -101,7 +101,7 @@ ALTER TABLE `reservations`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT pro tabulku `rooms`
+-- AUTO_INCREMENT pro tabulku `rooms`;
 --
 ALTER TABLE `rooms`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;

@@ -10,7 +10,6 @@ class User{
 
   static function loginUser(string $username, string $password){
     
-
   }
 
   static function logoutUser(){
