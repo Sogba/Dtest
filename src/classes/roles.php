@@ -3,7 +3,7 @@ require_once "./config.php";
 require_once ROOT_DIR."src/scripts/redirection.php";
 require_once ROOT_DIR."src/classes/database.php";
 
-class UserDefault{
+class User{
   static function registerUser(string $username, string $password){
 
   }
@@ -33,8 +33,4 @@ trait UserTrait{
   private string $username;
   private string $first_name;
   private string $last_name;
-}
-
-class User{
-  use UserTrait;
 }

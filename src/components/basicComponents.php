@@ -13,3 +13,7 @@ function createHead(string $pageName){
   <?php
   endif;
 }
+
+function navbar(){
+
+}

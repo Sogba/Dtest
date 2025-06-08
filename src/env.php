@@ -1,5 +1,5 @@
 <?php
-define('DATABASE_SERVER', 'sql7.freesqldatabase.com');
-define('DATABASE_NAME', 'sql7783563');
-define('DATABASE_USER', 'sql7783563');
-define('DATABASE_KEY', 'F5UIxDnF5M');
+define('DATABASE_SERVER', '127.0.0.1');
+define('DATABASE_NAME', 'kkt');
+define('DATABASE_USER', 'production');
+define('DATABASE_KEY', 'jebuheslo');
