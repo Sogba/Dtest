@@ -27,13 +27,13 @@ function registerForm(){
       <input type="text" name="first_name" id="first_name" required>
 
       <label for="second_name">Second name:</label>
-      <input type="text" name="second_name" required>
+      <input type="text" name="second_name" id="second_name" required>
 
       <label for="password">Password:</label>
-      <input type="password" name="password" required>
+      <input type="password" name="password" id="password" required>
 
       <label for="confirm_password">Confirm Password:</label>
-      <input type="password" name="confirm_password" required>
+      <input type="password" name="confirm_password" id="confirm_password" required>
 
       <button type="submit">Register</button>
     </form>
@@ -54,23 +54,14 @@ function logoutButton(){
   endif;
 }
 
-function authenticatePostResolve(){
-  if (isset($_POST["logout"]) && $_POST["logout"] === "koko") {
-    logout();
-  }
-
-  if (isset($_POST["register"]) && $_POST["register"] === "koko") {
-    if($_POST["password"] != $_POST["confirm_password"]){
-      echo "Not same password";
-      return;
-    }
-    $email = filter_var($_POST["email"], FILTER_VALIDATE_EMAIL);
-    $first_name = filter_var($_POST["first_name"],FILTER_SANITIZE_STRING);
-    $second_name = filter_var($_POST["second_name"],FILTER_SANITIZE_STRING);
-    register($email, $first_name, $second_name, password_hash($_POST["password"], PASSWORD_BCRYPT));
-  }
-
-  if (isset($_POST["login"]) && $_POST["login"] === "koko") {
-    login($_POST["email"], password_hash($_POST["password"], PASSWORD_BCRYPT));
-  }
+function authForm(){
+  loginForm();
+  registerForm();
+  if(true):?>
+  <div class="auth-buttons">
+    <button class="toggle-btn active" id="loginButton">Login</button>
+    <button class="toggle-btn" id="registerButton">Register</button>
+  </div>
+  <?php
+  endif;
 }

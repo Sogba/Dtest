@@ -2,7 +2,8 @@
   require_once "./config.php";
 
 class Database{
-  private ?PDO $connection;
+  private static $instance = null;
+  private PDO $connection;
 
   public function __construct()
   {
@@ -22,15 +23,16 @@ class Database{
     }
   }
 
-  public function query(string $query, array $params = []){
-    try{
+  public function executeQuery(string $query, array $params = []){
       $stmt = $this->connection->prepare($query);
       $stmt->execute($params);
       return $stmt;
+  }
+
+  public static function getInstance(): Database {
+    if (self::$instance === null) {
+        self::$instance = new Database();
     }
-    catch(PDOException $e){
-      echo $e->getMessage();
-      exit;
-    }
+    return self::$instance;
   }
 }

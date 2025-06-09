@@ -1,0 +1,15 @@
+--Aplikace bude spolupracovat s databází
+--Aplikace bude používat postupy, které vyhovují kyberbezpečnostním postupům
+++Aplikace bude mít přihlašovací formulář
+++Hesla budou hashována
+--Aplikace bude řešit role uživatele a bude ji možno měnit.
+--Role administrator může v systému vše
+--Role uživatel může data pouze zadávat a číst (nikoliv měnit)
+--Rezervace místnosti se musí schvalovat - administrator
+--Aplikace bude používat CSS, bude well formated, responzivní
+++Pro přístup k DB bude aplikace mít vlastního uživatele!!! (ne root)
+-Aplikace MUSÍ obsahovat formulář, 
+++pro přihlášení, 
+--pro vložení rezervace, 
+--pro vložení místnosti, 
+--pro schválení rezervace!!!
