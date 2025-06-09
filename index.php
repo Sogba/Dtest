@@ -7,7 +7,7 @@ require_once ROOT_DIR."src/components/authenticationComponets.php"
 ?>
 <p>INDEX</p>
 <?php createHead("Domovská stránka");
-
+echo "for login";
 
 
 ?>
