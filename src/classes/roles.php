@@ -1,7 +1,7 @@
 <?php
 require_once "./config.php";
-require_once ROOT_DIR."src/scripts/redirection.php";
-require_once ROOT_DIR."src/classes/database.php";
+require_once "./src/scripts/redirection.php";
+require_once "./src/classes/database.php";
 
 class User{
   static function registerUser(string $username, string $password){

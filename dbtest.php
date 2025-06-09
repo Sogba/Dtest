@@ -1,11 +1,11 @@
 <?php
 require_once "config.php";
-require_once ROOT_DIR."src/classes/database.php";
-require_once ROOT_DIR."src/components/basicComponents.php";
+require_once "./src/classes/database.php";
+require_once "./src/components/basicComponents.php";
 
-  createHead("Test databáze");?>
-  <H1>Test databáze</H1><?php
-  $db = new Database;
+createHead("Test databáze");?>
+<H1>Test databáze</H1><?php
+$db = new Database;
 
   $users = $db->query("SELECT * from users");
   $rooms = $db->query("SELECT * from rooms");

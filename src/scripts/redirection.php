@@ -2,6 +2,6 @@
 require_once "./config.php";
 
 function redirect(string $address){
-  header("location: ".ROOT_DIR.$address);
+  header("location: ./".$address);
   exit;
 }
